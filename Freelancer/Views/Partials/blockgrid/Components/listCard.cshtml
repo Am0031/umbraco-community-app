@@ -1,0 +1,65 @@
+﻿@inherits UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem<ContentModels.ListCard>>
+
+
+@{
+    var title = Model?.Content?.Title;
+    var description = Model?.Content?.Description;
+    var itemDate = Model?.Content?.Date;
+    var image = Model?.Content?.Image;
+    var link = Model?.Content?.Link;
+    var location = Model?.Content?.Location;
+
+}
+
+
+
+
+<!-- Calendar Invite Card -->
+<div class="card rounded border shadow-sm p-3 text-center" style="max-width: 320px; margin: auto;">
+    <!-- Title -->
+    @if (!string.IsNullOrWhiteSpace(title))
+    {
+        <h4 class="mb-2 text-black">@title</h4>
+    }
+    else
+    {
+
+        <h4 class="mb-2">Meeting</h4>
+    }
+
+
+    <!-- Date & Location -->
+    <div class="d-flex flex-column justify-content-center align-items-center gap-3 mb-2">
+        @if (itemDate != null)
+        {
+            <div class="d-flex align-items-center text-muted">
+                <i class="fas fa-calendar-alt me-2"></i>
+                <span>@itemDate</span>
+            </div>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(location))
+        {
+            <div class="d-flex align-items-center text-muted">
+                <i class="fas fa-map-marker-alt me-2"></i>
+                <span>@location</span>
+            </div>
+        }
+    </div>
+
+
+
+    <!-- Description -->
+    @if (!string.IsNullOrWhiteSpace(description))
+    {
+        <p class="text-muted mb-3">@description</p>
+    }
+
+    <!-- Action Button -->
+    @if (link != null)
+    {
+        <a href="@link.Url" target="@link.Target" class=" btn-sm btn btn-outline-primary align-self-center mt-auto">
+            More Info <i class="fas fa-arrow-right ms-1"></i>
+        </a>
+    }
+</div>

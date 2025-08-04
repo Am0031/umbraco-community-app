@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+        <Content Include="App_Plugins\BlockGridPreviews\**\*">
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+        <Content Include="appsettings.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+  </ItemGroup>
+
+
+  <ItemGroup>
+	<PackageReference Include="Google.Apis.Drive.v3" Version="1.69.0.3740" />
+	<PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.15" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.15" />
+	<PackageReference Include="Our.Umbraco.Slimsy" Version="5.1.2" />
+    <PackageReference Include="Our.Umbraco.TagHelpers" Version="1.2.0" />
+    <PackageReference Include="Umbraco.Cms" Version="13.5.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Opt-in to app-local ICU to ensure consistent globalization APIs across different platforms -->
+    <PackageReference Include="Microsoft.ICU.ICU4C.Runtime" Version="72.1.0.3" />
+    <PackageReference Include="Umbraco.Community.BlockPreview" Version="1.12.2" />
+    <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="72.1.0.3" Condition="$(RuntimeIdentifier.StartsWith('linux')) or $(RuntimeIdentifier.StartsWith('win')) or ('$(RuntimeIdentifier)' == '' and !$([MSBuild]::IsOSPlatform('osx')))" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\HomePage.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Generated\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="App_Plugins\BlockGridPreviews\package.manifest" />
+  </ItemGroup>
+
+  <ItemGroup>
+        <Content Include="wwwroot\**\*" CopyToPublishDirectory="PreserveNewest"/>
+  </ItemGroup>
+
+
+  <PropertyGroup>
+    <!-- Razor files are needed for the backoffice to work correctly -->
+    <CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Remove RazorCompileOnBuild and RazorCompileOnPublish when not using ModelsMode InMemoryAuto -->
+    <!--<RazorCompileOnBuild>false</RazorCompileOnBuild>
+    <RazorCompileOnPublish>false</RazorCompileOnPublish>-->
+    <UserSecretsId>3892d177-a8ea-4d96-a045-6d8a3b854d5d</UserSecretsId>
+  </PropertyGroup>
+    
+  <PropertyGroup>
+        <EnableDefaultContentItems>false</EnableDefaultContentItems>
+  </PropertyGroup>
+    
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+        <Exec Command="dotnet format --severity warn --verbosity diagnostic" />
+  </Target>
+
+</Project>

@@ -1,0 +1,50 @@
+﻿@inherits UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem<ContentModels.ItemCard>>
+
+
+@{
+    var title = Model?.Content?.Title;
+    var description = Model?.Content?.Description;
+    var image = Model?.Content?.Image;
+    var link = Model?.Content?.Link;
+
+}
+
+<!-- Card item -->
+
+<div class="d-flex flex-column align-items-center p-3 h-100 text-center width-200">
+    <!-- Circular Profile Image -->
+    <div class="mb-3" style="width: 150px; height: 150px;">
+        @if (image == null)
+        {
+            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center h-100 w-100 border border-2 border-secondary">
+                <i class="fas fa-user text-muted fa-3x"></i>
+            </div>
+        }
+        else
+        {
+            <img class="img-fluid rounded-circle h-100 w-100 object-fit-cover border border-2 border-light shadow-sm"
+                 src="@image.GetCropUrl(300, 300, quality: 80)"
+                 alt="@(image.GetAltText() ?? title)"
+                 loading="lazy" />
+        }
+    </div>
+
+    <!-- Name and Email -->
+    <div class="text-center">
+        <h4 class="mb-1">@title</h4>
+        @if (!string.IsNullOrWhiteSpace(description.ToString()))
+        {
+            <p class="text-muted mb-0">
+                <a href="mailto:@description" class="text-decoration-none">@description</a>
+            </p>
+        }
+    </div>
+
+    <!-- Optional Link -->
+    @if (link != null)
+    {
+        <a href="@link.Url" target="@link.Target" class="btn btn-sm btn-outline-primary mt-3">
+            Contact <i class="fas fa-arrow-right ms-1"></i>
+        </a>
+    }
+</div>

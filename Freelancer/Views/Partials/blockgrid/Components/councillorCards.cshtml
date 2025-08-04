@@ -1,0 +1,67 @@
+﻿@inherits UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem<ContentModels.CouncillorCards>>
+@inject Freelancer.Services.GoogleDrive.IGoogleDriveService GoogleDriveService
+
+
+
+@{
+    var driveId = Model.Content.DriveID;
+    var externalLink = Model.Content.ExternalLink;
+
+
+
+    if (!string.IsNullOrEmpty(driveId))
+    {
+        var driveData = await GoogleDriveService.GetDriveDataAsync(driveId);
+
+        <!-- Document Link Line-->
+<div class="container">
+
+        <div class="row justify-content-center gap-4">
+            @if (driveData != null)
+            {
+
+                foreach (var item in driveData.Files)
+                {
+                    var imageUrl = $"https://lh3.googleusercontent.com/d/{item.Id}";
+
+                    var rawName = item.Name.Substring(0, item.Name.LastIndexOf("."));
+                    var itemName = string.Join(" ", rawName.Split("-").Select(word => char.ToUpper(word[0]) + word.Substring(1)));
+                    var itemEmail = $"{rawName.Replace("-", ".")}@rotparishcouncil.gov.uk";
+
+
+                    <div class="d-flex flex-column align-items-center p-3 h-100 text-center width-200">
+                        <div class="mb-3" style="width: 150px; height: 150px;">
+                            <img class="img-fluid rounded-circle h-100 w-100 object-fit-cover border border-2 border-light shadow-sm"
+                                 src="@imageUrl"
+                                 alt="@itemName"
+                                 loading="lazy" />
+                        </div>
+                        <div class="text-center m-4">
+                            <h4 class="mb-1">@itemName</h4>
+                            @if (!!string.IsNullOrEmpty(externalLink))
+                            {
+                                // Otherwise, show the email contact link
+                                <a href="mailto:@itemEmail" class="text-decoration-none text-primary">Contact by email</a>
+                            }
+
+                        </div>
+                    </div>
+                }
+                @if (!string.IsNullOrEmpty(externalLink))
+                {
+                    <div class="text-center mb-4">
+
+                        <a href="@externalLink" class="btn btn-xl btn-outline-primary" target="_blank" rel="noopener">Visit page</a>
+                    </div>
+                }
+
+
+            }
+        </div>
+
+</div>
+
+    }
+}
+
+

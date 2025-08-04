@@ -1,0 +1,35 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.ArticlesItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    Layout = "Main.cshtml";
+}
+
+@await Html.PartialAsync("articleHeader", Model)
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="header mb-4">
+                <h1 class="mb-3">@Model.Value("articleTitle")</h1>
+
+                @if (Model.HasValue("articleImage"))
+                {
+                    <div class="mb-4">
+                        <img src="@Model.Value("articleImage")" alt="Article image" class="img-fluid rounded shadow">
+                    </div>
+                }
+            </div>
+
+            <div class="article-content mb-5">
+                @Model.Value("articleContent")
+            </div>
+
+            <div class="end">
+                <a class="btn btn-outline-secondary" href="/news">
+                    <i class="fas fa-arrow-left me-2"></i>Back to News
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

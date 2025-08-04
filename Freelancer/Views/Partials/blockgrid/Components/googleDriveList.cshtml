@@ -1,0 +1,40 @@
+﻿@inherits UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem<ContentModels.GoogleDriveList>>
+@inject Freelancer.Services.GoogleDrive.IGoogleDriveService GoogleDriveService
+
+@{
+    var driveId = Model.Content.DriveID;
+    var driveTitle = Model.Content.Title;
+
+    //var driveData = string.Empty;
+
+    if (!string.IsNullOrEmpty(driveId))
+    {
+        var driveData = await GoogleDriveService.GetDriveDataAsync(driveId);
+
+        <!-- Document Link Line-->
+        <div class="justify-content-center mb-4">
+            <div class="text-left mt-4">
+                @if (driveData != null)
+                {
+      
+                    <h4> @driveTitle ( @driveData.Files.Count() )</h4>
+                    foreach(var item in driveData.Files)
+                    {
+                        var fileUrl = $"https://drive.google.com/file/d/{item.Id}/view?usp=drive_link";
+                        <div class="cursor-pointer">
+                            <a href="@fileUrl"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="drive-link">
+                                @item.Name
+                            </a>
+                        </div>
+                    }
+
+
+                }
+            </div>
+        </div>
+    }
+}
+

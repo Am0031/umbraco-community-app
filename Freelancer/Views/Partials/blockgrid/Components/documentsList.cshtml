@@ -1,0 +1,48 @@
+﻿@inherits UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem<ContentModels.DocumentsList>>
+@using Newtonsoft.Json;
+
+@{
+    var linksList = Model.Content.LinksList;
+    var listTitle = Model.Content.ManualTitle;
+
+}
+
+<!-- Document Link Line-->
+<div class="justify-content-center mb-4">
+    <div class="text-left mt-4">
+        @if (linksList?.Count > 0)
+        {
+
+            @if (!string.IsNullOrEmpty(listTitle))
+            {
+
+                <h4>@listTitle (@linksList.Count)</h4>
+            }
+            else
+            { <h4>Additional documents (@linksList.Count)</h4>}
+
+
+            foreach (BlockListItem<ContentModels.DocumentLink> item in linksList)
+            {
+                var content = item.Content;
+                var itemLink = content.Link;
+                var docLabel = item.Content.Label ?? "UntitledDocument";
+
+
+
+                            <a href="@itemLink.Url"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="drive-link">
+                                @itemLink.Name
+                            </a>
+
+            }
+
+            <br />
+
+
+        }
+
+    </div>
+</div>

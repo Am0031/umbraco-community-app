@@ -1,0 +1,108 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ameli\\code\\alpe\\rotpc-umbraco\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F0907CE0-BD0D-49B3-AD08-55F158C5C0A2}|Freelancer\\Freelancer.csproj|c:\\users\\ameli\\code\\alpe\\rotpc-umbraco\\freelancer\\views\\partials\\blockgrid\\components\\listcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F0907CE0-BD0D-49B3-AD08-55F158C5C0A2}|Freelancer\\Freelancer.csproj|solutionrelative:freelancer\\views\\partials\\blockgrid\\components\\listcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0907CE0-BD0D-49B3-AD08-55F158C5C0A2}|Freelancer\\Freelancer.csproj|c:\\users\\ameli\\code\\alpe\\rotpc-umbraco\\freelancer\\views\\articlesmain.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F0907CE0-BD0D-49B3-AD08-55F158C5C0A2}|Freelancer\\Freelancer.csproj|solutionrelative:freelancer\\views\\articlesmain.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0907CE0-BD0D-49B3-AD08-55F158C5C0A2}|Freelancer\\Freelancer.csproj|c:\\users\\ameli\\code\\alpe\\rotpc-umbraco\\freelancer\\views\\articlesitem.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F0907CE0-BD0D-49B3-AD08-55F158C5C0A2}|Freelancer\\Freelancer.csproj|solutionrelative:freelancer\\views\\articlesitem.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0907CE0-BD0D-49B3-AD08-55F158C5C0A2}|Freelancer\\Freelancer.csproj|c:\\users\\ameli\\code\\alpe\\rotpc-umbraco\\freelancer\\views\\partials\\blockgrid\\components\\calltoactionlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F0907CE0-BD0D-49B3-AD08-55F158C5C0A2}|Freelancer\\Freelancer.csproj|solutionrelative:freelancer\\views\\partials\\blockgrid\\components\\calltoactionlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0907CE0-BD0D-49B3-AD08-55F158C5C0A2}|Freelancer\\Freelancer.csproj|c:\\users\\ameli\\code\\alpe\\rotpc-umbraco\\freelancer\\views\\partials\\blockgrid\\components\\listcards.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F0907CE0-BD0D-49B3-AD08-55F158C5C0A2}|Freelancer\\Freelancer.csproj|solutionrelative:freelancer\\views\\partials\\blockgrid\\components\\listcards.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ArticlesMain.cshtml",
+              "DocumentMoniker": "C:\\Users\\ameli\\code\\alpe\\rotpc-umbraco\\Freelancer\\Views\\ArticlesMain.cshtml",
+              "RelativeDocumentMoniker": "Freelancer\\Views\\ArticlesMain.cshtml",
+              "ToolTip": "C:\\Users\\ameli\\code\\alpe\\rotpc-umbraco\\Freelancer\\Views\\ArticlesMain.cshtml",
+              "RelativeToolTip": "Freelancer\\Views\\ArticlesMain.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADMAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-03T21:02:39.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ArticlesItem.cshtml",
+              "DocumentMoniker": "C:\\Users\\ameli\\code\\alpe\\rotpc-umbraco\\Freelancer\\Views\\ArticlesItem.cshtml",
+              "RelativeDocumentMoniker": "Freelancer\\Views\\ArticlesItem.cshtml",
+              "ToolTip": "C:\\Users\\ameli\\code\\alpe\\rotpc-umbraco\\Freelancer\\Views\\ArticlesItem.cshtml",
+              "RelativeToolTip": "Freelancer\\Views\\ArticlesItem.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-03T21:02:16.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "callToActionList.cshtml",
+              "DocumentMoniker": "C:\\Users\\ameli\\code\\alpe\\rotpc-umbraco\\Freelancer\\Views\\Partials\\blockgrid\\Components\\callToActionList.cshtml",
+              "RelativeDocumentMoniker": "Freelancer\\Views\\Partials\\blockgrid\\Components\\callToActionList.cshtml",
+              "ToolTip": "C:\\Users\\ameli\\code\\alpe\\rotpc-umbraco\\Freelancer\\Views\\Partials\\blockgrid\\Components\\callToActionList.cshtml",
+              "RelativeToolTip": "Freelancer\\Views\\Partials\\blockgrid\\Components\\callToActionList.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-10T10:27:00.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "listCard.cshtml",
+              "DocumentMoniker": "C:\\Users\\ameli\\code\\alpe\\rotpc-umbraco\\Freelancer\\Views\\Partials\\blockgrid\\Components\\listCard.cshtml",
+              "RelativeDocumentMoniker": "Freelancer\\Views\\Partials\\blockgrid\\Components\\listCard.cshtml",
+              "ToolTip": "C:\\Users\\ameli\\code\\alpe\\rotpc-umbraco\\Freelancer\\Views\\Partials\\blockgrid\\Components\\listCard.cshtml",
+              "RelativeToolTip": "Freelancer\\Views\\Partials\\blockgrid\\Components\\listCard.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAEAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-10T10:17:27.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "listCards.cshtml",
+              "DocumentMoniker": "C:\\Users\\ameli\\code\\alpe\\rotpc-umbraco\\Freelancer\\Views\\Partials\\blockgrid\\Components\\listCards.cshtml",
+              "RelativeDocumentMoniker": "Freelancer\\Views\\Partials\\blockgrid\\Components\\listCards.cshtml",
+              "ToolTip": "C:\\Users\\ameli\\code\\alpe\\rotpc-umbraco\\Freelancer\\Views\\Partials\\blockgrid\\Components\\listCards.cshtml",
+              "RelativeToolTip": "Freelancer\\Views\\Partials\\blockgrid\\Components\\listCards.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-10T10:17:14.76Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

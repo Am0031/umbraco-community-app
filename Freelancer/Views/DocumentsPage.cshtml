@@ -1,0 +1,22 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.DocumentsPage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    Layout = "Main.cshtml";
+}
+
+@await Html.GetBlockGridHtmlAsync(Model, "headerContent")
+<div class="w-100 p-4 flex align-items-center ">
+        <div class="w-75 md:w-3/4 lg:w-1/2 mx-auto ">
+
+            <h2>@Model.Title</h2>
+            <div>@Html.Raw(Model.Description)</div>
+        </div>
+</div>
+<div class="w-100 p-4 flex align-items-center ">
+    <div class="w-75 md:w-3/4 lg:w-1/2 mx-auto ">
+
+        <h2>@Model.ListTitle</h2>
+        @await Html.GetBlockGridHtmlAsync(Model, "listContent")
+    </div>
+</div>

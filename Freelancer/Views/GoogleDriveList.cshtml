@@ -1,0 +1,15 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.GoogleDriveList>
+@*@inherits UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem<ContentModels.GoogleDriveList>>*@
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    Layout = "Main.cshtml";
+}
+
+@{
+    var title = Model.DriveID;
+    var description = Model?.Content?.Description;
+    var image = Model?.Content?.Image;
+    var link = Model?.Content?.Link;
+
+}

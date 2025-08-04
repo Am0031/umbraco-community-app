@@ -1,0 +1,24 @@
+﻿@inherits UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem<ContentModels.DocumentLink>>
+
+@{
+    var docLink = Model.Content.Link;
+    var docIcon = Model.Content.Icon;
+    var docLabel = Model.Content.Label;
+}
+
+<!-- Document Link Line-->
+<div class="justify-content-center mb-4">
+    <div class="text-center mt-4">
+        @if(docLink != null)
+        {
+        <a class="text-secondary" href="@docLink.Url" target="@docLink.Target">
+            @if (docIcon != null)
+            {
+                <span class="icon-link">
+                    <our-svg media-item="docIcon" class="svg-inline--fa fa-fw text-secondary"></our-svg>
+                </span>}
+                @docLabel
+            </a>
+        }
+    </div>
+</div>

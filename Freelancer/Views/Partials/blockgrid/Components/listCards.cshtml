@@ -1,0 +1,17 @@
+﻿@inherits UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem<ContentModels.ListCards>>
+
+
+@{
+    const int CONTENT_AREA = 0;
+
+}
+
+<!-- Cards Section-->
+<section class="page-section portfolio" id="cards-area">
+    <div class="container">
+        <!-- Cards Grid Items-->
+        <div class="row justify-content-center gap-4">
+        @await Html.GetBlockGridItemAreaHtmlAsync(Model.Areas.ElementAt(CONTENT_AREA))
+        </div>
+    </div>
+</section>

@@ -1,0 +1,49 @@
+﻿@inherits UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem<ContentModels.ArticlesItem>>
+
+
+@{
+    var title = Model?.Content?.articleTitle;
+    var description = Model?.Content?.articleContent;
+    var image = Model?.Content?.articleImage;
+    var link = Model?.Content?.articleLink;
+
+}
+
+<!-- Card Item-->
+
+<div class="p-0 align-items-center justify-i-center h-100 w-25 m-2 border border-1 border-black">
+    <div class="" width="200">
+
+    @if (image == null)
+    {
+        <img class="img-fluid lazyload min-w-100" src="assets/img/portfolio/cabin.png" width="200" height="150" sizes="auto" alt="..." />
+    }
+    else
+    {
+        <img class="img-fluid lazyload" data-srcset="@Url.GetSrcSetUrls(image, 200, 150)" src="@image.GetCropUrl(40, 29, quality: 40)" alt="@image.GetAltText()" width="200" height="150" />
+    }
+    </div>
+    <div class="m-2">
+
+    <div class="portfolio-item-caption-content text-center">
+        @if (string.IsNullOrEmpty(title))
+        {
+            <p>No title</p>
+        }
+        else
+        {
+            <h4>@title</h4>
+        }
+    </div>
+    <div class="portfolio-item-caption-content text-center">
+        @if (description is null)
+        {
+            <p>No description</p>
+        }
+        else
+        {
+            @description
+        }
+    </div>
+    </div>
+</div>
