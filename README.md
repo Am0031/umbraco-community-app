@@ -2,14 +2,15 @@
 
 ## Pages screenshots
 
-### Menu sections
-
 <details>
 <summary>Landing Page / Home page</summary>
+<description>General intro text, with explore section for easy links to the most visited pages.</description>
 
 ![landing-page](screenshots/landing-page.png)
 
 </details>
+
+### Menu sections
 
 The council
 
