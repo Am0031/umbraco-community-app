@@ -6,6 +6,7 @@
 - Set up the relevant secrets in Visual studio and in the solution files (google apis and google authentication)
 - Set up a local SQL server
 - Restore the local SQL database and adjust the connection string in the application file
+- Run the application
 
 ## Pages screenshots - Public interface
 
